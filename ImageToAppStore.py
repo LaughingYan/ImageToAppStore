@@ -5,6 +5,7 @@
 # 2. output: all size image to upload 'https://itunesconnect.apple.com'
 # 3. need  : PIL
 # 4. if need Landscape screen, just change 'isScreenPortrait' to 0
+# 5. add source file type detect, support 'jpg' and 'png' now, you can add some other type 
 
 
 import os,sys
@@ -48,7 +49,7 @@ for fileInfo in outputFileInfo:
         if not os.path.exists(fileInfo[0]):
                 os.mkdir(fileInfo[0]);
 for file in os.listdir('source_Image'+ os.sep ):
-	if os.path.isfile('source_Image'+ os.sep +file):
+  if os.path.isfile('source_Image'+ os.sep +file) and (0<file.rfind('.png') or 0<file.rfind('.jpg')):
                 pics.append(file)
 print pics
 for pic in pics:
