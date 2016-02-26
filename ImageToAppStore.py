@@ -4,6 +4,7 @@
 # 1. input : some image in folder 'source_Image'
 # 2. output: all size image to upload 'https://itunesconnect.apple.com'
 # 3. need  : PIL
+# 4. if need Landscape screen, just change 'isScreenPortrait' to 0
 
 
 import os,sys
